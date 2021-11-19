@@ -174,10 +174,11 @@ function getWinner(playerMove, computerMove){
                     
         else if(playerMove === "rock" && computerMove === "rock" ){ //draw
         return 0;
-        }
-                    
-                    
-        if(playerMove === "paper" && computerMove === "lizard" ){ //loss
+    }
+        //paper
+       
+
+    if(playerMove === "paper" && computerMove === "lizard" ){ //loss
         return -1;}
         else if(playerMove === "paper" && computerMove === "scissors" ){ //loss
         return -1;}
@@ -274,3 +275,15 @@ function getWinner(playerMove, computerMove){
 
 //How many times does something beat and lose or draw?
 //Something can win twice and lose twice.
+
+
+
+// How would you go about making the computer win every time?
+    //Asking what the human enters and then get the computer to select a choice that beats it
+        //Store all possibilities in arrays
+// How would you go about making it so that the computer wins more often (1/2 the time, 1/4 of the time 90% of the time)?
+    //Create function where you can pass in a probability between 0-100% (either user-entered or hard-coded by programmer)
+    //OR 
+// Plan how you'd go about implementing this (use pseudo-code).
+
+// If you have time, see if you can start writing this.
