@@ -81,4 +81,5 @@ let playerMove = "paper";
 let computerMove = "paper";
 
 
-
+let result = getWinner(playerMove,computerMove); //0
+console.log(result);
