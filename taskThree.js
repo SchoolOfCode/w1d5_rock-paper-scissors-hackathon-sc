@@ -43,4 +43,4 @@ let playerMove = prompt("rock, paper, or scissors?");
 let computerMove = "paper";
 
 let result = getWinner(playerMove,computerMove); //0
-alert("You chose: " + result + ". The computer chose: " + computerMove);
+alert("Here's your result: " + result + ". The computer chose: " + computerMove);
