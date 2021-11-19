@@ -66,7 +66,7 @@ alert(`Welcome ${userName}.`);
 while(continuePlaying === true){
     let playerMove = prompt("Rock, paper, lizard, scissors, spock?!!!?!?!?!?!?!??");
     
-    computerMove = getComputerMove(probability, playerMove);
+    computerMove = getComputerMove(probability, playerMove.toLowerCase());
     
     let result = getWinner(playerMove.toLowerCase(), computerMove); //0
     
