@@ -52,15 +52,19 @@ continuePlaying = confirm("Would you like to keep playing? ");
 
 }
 
-if (score.wins > score.losses){
+let farewell = "THANKS FOR PLAYING :)";
 
+if (score.wins > score.losses){
+    farewell = "THANKS FOR PLAYING MY DEAR FRIEND";
+} else {
+    farewell = "APPALLING SHOW. TRY BETTER NEXT TIME";
 }
 
 alert(`You played ${score.gamesPlayed} times. 
 You won ${score.wins} many times. 
 You lost ${score.losses} many times. 
 You drew ${score.draws} many times. 
-THANKS FOR PLAYING MY DEAR FRIEND`);
+${farewell}`);
 
 
 function getWinner(playerMove, computerMove){
