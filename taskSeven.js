@@ -28,9 +28,28 @@ let userName;
 //---------------------------------------Main flow 
 let continuePlaying = true;
 
+//IsNaN PLAN
+
+//Is not a number- isNaN(userName.slice(0,0))
+//take the first letter of userName using slice(0,0)
+// '4' is isNaN('4') 
+//if it is a number it will return as false
+//isNaN(userName.slice(0,1))
+
+//Regular expression 
+
+function isALetter(char){
+    return (/[a-z]/).test(char);
+}
+
 while(userName === undefined) {
-    userName = prompt("What is your name? (Max 10 characters, first character must be a letter).");
-    if (userName.length > 10 || typeof userName.slice(0,0) != "string"){
+    userName = prompt(`What is your name? 
+    (-Max 10 characters.
+    -First character must be a letter.   
+    -First character must NOT be a capital letter.)`);
+
+
+    if (userName.length > 10 || isALetter(userName.slice(0,1)) === false){
         userName = undefined;
     }
 }
