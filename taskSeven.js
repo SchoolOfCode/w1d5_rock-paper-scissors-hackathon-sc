@@ -90,6 +90,7 @@ while(continuePlaying === true){
         result = "drew!";
     }else{
         result = "please enter something next time, do you think I have all day? You really can't check one little word?!";
+        
     }
     alert(`${userName} ${result}. 
     The computer chose: ${computerMove}`);
@@ -128,6 +129,14 @@ ${farewell}`);
 //store it in computerMove
 
 function getComputerMove(prob, TheUsersChoice){
+
+    //if TheUsersChoice is empty:
+
+    if(typeof TheUsersChoice === undefined){
+        TheUsersChoice = moves[ Math.floor(Math.random() * moves.length)] ;
+        console.log(`Moves user choice empty: Choosing ${TheUsersChoice} `);
+    };
+
     //create two variables for the function: a random number between 0-2 to select a random move 
     //One is an array to store 100 moves into
     let randomNumber = Math.floor(Math.random() * moves.length);
